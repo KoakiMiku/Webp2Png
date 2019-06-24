@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webp2Png", "Webp2Png\Webp2Png.csproj", "{4400B58F-9F06-446F-A2A7-240F2502D984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4400B58F-9F06-446F-A2A7-240F2502D984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4400B58F-9F06-446F-A2A7-240F2502D984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4400B58F-9F06-446F-A2A7-240F2502D984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4400B58F-9F06-446F-A2A7-240F2502D984}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B771F494-DBA6-482E-806A-615232FA20A2}
+	EndGlobalSection
+EndGlobal
