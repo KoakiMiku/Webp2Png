@@ -31,13 +31,14 @@ namespace Webp2Png
                     }
 
                     Console.WriteLine("Done.");
-                    Console.ReadKey();
                 }
                 else
                 {
                     Console.WriteLine("Arguments error!");
                     Console.WriteLine("Webp2Png [path1] [path2] ...");
                 }
+
+                Console.ReadKey();
             }
             catch (Exception ex)
             {
