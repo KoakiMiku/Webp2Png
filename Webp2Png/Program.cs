@@ -12,24 +12,31 @@ namespace Webp2Png
             {
                 if (args.Length > 0)
                 {
-                    var path = Path.GetFullPath(args[0]);
-                    var name = Path.GetFileNameWithoutExtension(args[0]);
-                    var folder = Path.Combine(AppContext.BaseDirectory, "output");
-                    var newpath = Path.Combine(folder, $"{name}.png");
+                    foreach (var arg in args)
+                    {
+                        var path = Path.GetFullPath(arg);
+                        var name = Path.GetFileNameWithoutExtension(arg);
+                        var folder = Path.Combine(AppContext.BaseDirectory, "output");
+                        var newpath = Path.Combine(folder, $"{name}.png");
 
-                    Directory.CreateDirectory(folder);
+                        Directory.CreateDirectory(folder);
 
-                    var image = File.ReadAllBytes(path);
-                    var decoder = new Imazen.WebP.SimpleDecoder();
-                    var bitmap = decoder.DecodeFromBytes(image, image.Length);
-                    bitmap.Save(newpath, ImageFormat.Png);
+                        var image = File.ReadAllBytes(path);
+                        var decoder = new Imazen.WebP.SimpleDecoder();
+                        var bitmap = decoder.DecodeFromBytes(image, image.Length);
+                        bitmap.Save(newpath, ImageFormat.Png);
+                        bitmap.Dispose();
+
+                        Console.WriteLine(name);
+                    }
 
                     Console.WriteLine("Done.");
+                    Console.ReadKey();
                 }
                 else
                 {
                     Console.WriteLine("Arguments error!");
-                    Console.WriteLine("Webp2Png [path]");
+                    Console.WriteLine("Webp2Png [path1] [path2] ...");
                 }
             }
             catch (Exception ex)
